@@ -1,0 +1,608 @@
+@font-face{
+	font-family: 'ArchivoBlack';
+	src:url('./fonts/ArchivoBlack-Regular.ttf')format('truetype');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face{
+	font-family:'Courgette';
+	src:url('./fonts/Courgette-Regular.ttf')format('truetype');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face{
+	font-family:'SourGummy';
+	src:url('./fonts/SourGummy-Light.ttf')format('truetype');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face{
+	font-family:'Magic Red';
+	src:url('./fonts/Magic Red.ttf')format('truetype');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face{
+	font-family:'BaskervvilleSC';
+	src:url('./fonts/BaskervvilleSC.ttf')format('truetype');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face{
+	font-family:'Kavoon';
+	src:url('./fonts/Kavoon-Regular.ttf')format('truetype');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face{
+	font-family:'Delius';
+	src:url('./fonts/Delius-Regular.ttf')format('truetype');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face{
+	font-family:'PatrickHand';
+	src:url('./fonts/PatrickHand-Regular.ttf')format('truetype');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face{
+	font-family:'CreteRound';
+	src:url('./fonts/CreteRound-Regular.ttf')format('truetype');
+	font-weight:normal;
+	font-style:normal;
+}
+
+body {
+    font-family: 'Delius', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+header h1{
+	text-align:center;
+}
+
+header {
+    text-align: center;
+    font-size: 1.4em;
+    position: relative;
+    min-height: 100px;
+    padding-top: 20px;
+}
+
+.header-audio {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.header-audio audio {
+    width: 160px;
+    height: 36px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.header-audio audio:hover {
+    opacity: 1;
+}
+
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+a:link {
+    text-decoration: none;
+    color: #614051; /*purple*/
+}
+
+a:visited {
+    color: #8a2be2; /*lighter purple */
+}
+
+a:hover {
+    color: #ff5252; /*red*/
+    text-decoration: none;
+}
+
+a:active {
+    color: #d81b60; /*pink-red*/
+    text-decoration: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.image-row img {
+    height: 225px;
+    width: auto;
+}
+
+.image-row {
+    justify-content: center;
+    gap: 20px;
+    line-height: 0;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+a img {
+    border: none;
+}
+
+/* Main Content */
+main {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: block;
+}
+
+:root {
+    --current-bg-image: none;
+}
+
+.faded-bg-enabled::before {
+    content: '';   
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;   
+    background-image: var(--current-bg-image);
+    background-size: cover;          
+    background-repeat: no-repeat;    
+    background-position: center center; 
+    z-index: -1;
+}
+
+/* Buttons */
+nav a {
+    text-decoration: none;
+}
+
+nav a:link,
+nav a:visited,
+nav a:hover,
+nav a:active,
+nav a:focus {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav button {
+    all: unset; 
+    background-color: lightyellow;
+    font-size: 0.9em;
+    color: #614051;
+    border: 1px solid lightgray;
+    padding: 8px 16px;
+    margin: 0 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav button:hover {
+    background-color: #fffacd;
+}
+
+nav button:active {
+    background-color: lightyellow;
+    transform: translateY(1px);
+}
+
+/* Footer */
+footer {
+    font-family:'Kavoon', sans-serif;
+    font-size: 0.75em;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #f8f9fa;
+}
+
+/* Headings */
+h1 {
+    font-family:'ArchivoBlack', sans-serif;
+    font-size: 37px;
+    margin-bottom: 10px;
+}
+
+.Education header,
+.Beebe header,
+.SeaShellShop header,
+.NYU_job header {
+    align-items: center;
+    padding: 20px 40px 10px 40px;
+    text-align: left;
+}
+
+.Education header h1 {
+    font-family:'ArchivoBlack', sans-serif;
+    font-size: 2em;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+.Education header p {
+    font-family:'Delius', sans-serif;
+    font-size: 1.1em;
+    margin: 0;
+    font-weight: bold;
+    margin: 0 0 25px 0;
+    text-align: center;
+	color:black;
+}
+
+.Education main {
+    display: block;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+/* Headings */
+.Education h2 {
+    font-family:'Courgette', sans-serif;
+    color: #604091;
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 2em;
+    margin-top: 30px;
+}
+
+.Education h3 {
+    font-family:'Magic Red', sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #482D6E;
+    text-align: left;
+    margin: 25px 0 15px 0;
+}
+
+.Education h4 {
+    font-family:'BaskervvilleSC', sans-serif;
+    font-size: 1.6em;
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #6533A6;
+    font-weight: normal; 
+    text-transform: none;
+    letter-spacing: normal; 
+}
+
+.Education h5 {
+    font-family:'SourGummy', sans-serif;
+    font-size: 1.5em;
+    margin: 25px 0 8px 0;
+    color: #7A49B8;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 5px;
+}
+
+/* Paragraphs */
+.Education p {
+    font-family:'Delius', sans-serif;
+    line-height: 1.5;
+    font-size: 1.1em;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: #4B0082;
+}
+
+/* Lists */
+.Education main ul {
+    font-family:'PatrickHand', sans-serif;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #311b92;
+    padding-left: 20px;
+    line-height: 1.4;
+}
+
+.Education main li {
+    margin-bottom: 8px;
+}
+
+.Education h3:last-of-type {
+    font-family:'Magic Red', sans-serif;
+    color: #482D6E;
+    font-size: 1.8em;
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-top: none;
+    padding-top: 0px;
+}
+
+.Education .image-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    margin: 30px 0 50px 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.Education .image-row img {
+    height: 220px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.Education .image-row a:hover img {
+    transform: translateY(-5px);
+}
+
+/* Beebe Page */
+.Beebe header p{
+    font-family:'Delius', sans-serif;
+    font-size: 1.1em;
+    margin: 0;
+    font-weight: bold;
+    margin: 0 0 25px 0;
+    text-align: center;
+	color:black;
+}
+.Beebe h2 {
+    font-family:'Magic Red', sans-serif;	
+    color: #2A4EA3;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.Beebe h3 {
+    font-family:'Kavoon', sans-serif;
+    font-weight: 400;
+    color: #4460A6;
+    text-align: left;
+    margin: 25px 0 15px 0;
+}
+
+.Beebe p {
+    font-family:'Delius', sans-serif;
+    line-height: 1.5;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #264CA6;
+}
+
+.Beebe main ul {
+    font-family:'SourGummy', sans-serif;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 1.17em;
+    color: #1F3C7D;
+    padding-left: 20px;
+}
+
+/* SeaShellShop Page */
+.SeaShellShop header p{
+    font-family:'Delius', sans-serif;
+    font-size: 1.1em;
+    margin: 0;
+    font-weight: bold;
+    margin: 0 0 25px 0;
+    text-align: center;
+	color:black;
+}
+.SeaShellShop h2 {
+    font-family:'Magic Red', sans-serif;	
+    color: #0B5435;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.SeaShellShop h3 {
+    font-family:'Kavoon', sans-serif;
+    font-weight: 400;
+    color: #378264;
+    text-align: left;
+    margin: 25px 0 15px 0;
+}
+
+.SeaShellShop p {
+    font-family:'Delius', sans-serif;
+    line-height: 1.5;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #00695c;
+}
+
+.SeaShellShop main ul {
+    font-family:'SourGummy', sans-serif;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 1.17em;
+    color: #007044;
+    padding-left: 20px;
+}
+
+/* NYU_job Page */
+.NYU_job header p{
+    font-family:'Delius', sans-serif;
+    font-size: 1.1em;
+    margin: 0;
+    font-weight: bold;
+    margin: 0 0 25px 0;
+    text-align: center;
+	color:black;
+}
+.NYU_job h2 {
+    font-family:'Magic Red', sans-serif;	
+    color: #373737;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.NYU_job h3 {
+    font-family:'Kavoon', sans-serif;
+    font-weight: 400;
+    color: #655967;
+    text-align: left;
+    margin: 25px 0 15px 0;
+}
+
+.NYU_job p {
+    font-family:'Delius', sans-serif;
+    line-height: 1.5;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #3F3F4E;
+}
+
+.NYU_job main ul {
+    font-family:'SourGummy', sans-serif;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 1.17em;
+    color: #322D31;
+    padding-left: 20px;
+}
+
+/* Job Date Location */
+.job-date-location {
+    font-family: 'Delius', sans-serif;
+    color: #666;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+	padding:15px;
+}
+
+.image-gallery img {
+    height: 200px;
+    width: auto;
+    border-radius: 8px;
+    object-fit: cover;
+	margin:10px;
+}
+
+/* ============ RESPONSIVE ============ */
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 28px;
+    }
+    
+    main {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .Education h5 {
+        font-size: 20px;
+    }
+    
+    .image-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .image-gallery img {
+        width: 85%;
+        height: auto;
+        max-height: 300px;
+        margin-bottom: 15px;
+    }
+    
+    .Beebe h2,
+    .SeaShellShop h2,
+    .NYU_job h2,
+    .Beebe h3,
+    .SeaShellShop h3,
+    .NYU_job h3 {
+        text-align: center;
+    }
+
+    nav button {
+        display: block;
+        width: 200px;
+        margin: 10px auto;
+    }
+
+    .Education header,
+	.Beebe header,
+	.SeaShellShop header,
+	.NYU_job header {
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
+        gap: 10px;
+        padding-top: 70px; 
+    }
+    
+    .header-audio {
+        top: 15px;
+        right: 15px;
+    }
+    
+    .header-audio audio {
+        width: 140px;
+        height: 32px;
+    }
+    
+    .Education .image-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .Education .image-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        justify-items: center;
+        align-items: center;
+    }
+    
+    .image-gallery {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); 
+        gap: 15px;
+        justify-items: center;
+    }
+    
+    .image-gallery img {
+        height: 180px;
+        width: 100%;
+    }
+}
